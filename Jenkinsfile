@@ -3,16 +3,10 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/mrsolankigit/Jenkins_Python_Selenium.git'
-            }
-        }
-
-        stage('Check Python Environment') {
+             stage('Check Python Environment') {
             steps {
                 sh '''
-                    python3 --version
+                    python --version
                     pip --version
                     google-chrome --version
                 '''
